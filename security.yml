@@ -7,10 +7,10 @@
         path: /home/ansible/lab-templates
         state: directory
         mode: '0755'
-        
+
     - name: Deploy template file
       template:
-        src: hardened.j2
+        src: /templates-lab/hardened.j2
         dest: /etc/sudoers.d/hardened
         mode: '0440'
         validate: /sbin/visudo -cf %s
