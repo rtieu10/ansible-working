@@ -10,7 +10,7 @@
 
     - name: Deploy template file
       template:
-        src: /templates-lab/hardened.j2
+        src: hardened.j2
         dest: /etc/sudoers.d/hardened
         mode: '0440'
         validate: /sbin/visudo -cf %s
